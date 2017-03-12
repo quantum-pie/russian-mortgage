@@ -4,10 +4,10 @@
 year_percent = 11;
 
 % target price in rubles
-target_price = 4000000;
+target_price = 6000000;
 
 % family month income in rubles
-month_income = 80000;
+month_income = 150000;
 
 % percent of income to pay credit
 payment_percent = 40;
@@ -19,7 +19,7 @@ initial_payment_percent = 20;
 month_pay = month_income * payment_percent / 100;
 
 % number of operations
-operations = 3;
+operations = 1;
 
 %% Calculations
 
@@ -93,6 +93,8 @@ if operations == 2
     xlabel('First op price, millions')
     ylabel('Duration in months')
     
+    hold off
+    
 elseif operations == 3    
     delta_graphic = target_price / 50;
     x = 0:delta_graphic:target_price;
@@ -111,6 +113,8 @@ elseif operations == 3
     xlabel('First op price, millions')
     ylabel('Second op price, millions')
     zlabel('Duration in months')
+    
+    hold off
     
 elseif operations == 4 
     delta_graphic = target_price / 10;
@@ -142,6 +146,6 @@ elseif operations == 4
     xlabel('First op price, millions')
     ylabel('Second op price, millions')
     zlabel('Third op price, millions')
+    
+    hold off
 end
-
-hold off
